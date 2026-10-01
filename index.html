@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escuela de Música - Los Moggers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Escuela de Música "Los Moggers"</h1>
+    
+    <!-- SECCIÓN INSTRUMENTOS (5 parámetros) -->
+    <h2>Registro de Instrumentos</h2>
+    <form onsubmit="agregarInstrumento(event)">
+        <label>Código (Clave Única):</label>
+        <input type="text" id="inst-codigo" placeholder="Ej: INST-001" required><br>
+        <label>Nombre:</label>
+        <input type="text" id="inst-nombre" placeholder="Ej: Guitarra" required><br>
+        <label>Tipo:</label>
+        <input type="text" id="inst-tipo" placeholder="Ej: Cuerda" required><br>
+        <label>Marca:</label>
+        <input type="text" id="inst-marca" placeholder="Ej: Fender" required><br>
+        <label>Año:</label>
+        <input type="number" id="inst-anio" placeholder="Ej: 2023" required><br>
+        <button type="submit">Guardar Instrumento</button>
+    </form>
+
+    <h2>Consulta de Instrumentos</h2>
+    <table id="tabla-instrumentos">
+        <thead>
+            <tr><th>Código</th><th>Nombre</th><th>Tipo</th><th>Marca</th><th>Año</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <hr>
+
+    <!-- SECCIÓN PROFESORES (4 parámetros) -->
+    <h2>Registro de Profesores</h2>
+    <form onsubmit="agregarProfesor(event)">
+        <label>DNI (Clave Única):</label>
+        <input type="text" id="prof-dni" placeholder="Ej: 30123456" required><br>
+        <label>Nombre:</label>
+        <input type="text" id="prof-nombre" placeholder="Ej: Axl Rose" required><br>
+        <label>Materia:</label>
+        <input type="text" id="prof-materia" placeholder="Ej: Canto" required><br>
+        <label>Teléfono:</label>
+        <input type="text" id="prof-telefono" placeholder="Ej: 1122334455" required><br>
+        <button type="submit">Guardar Profesor</button>
+    </form>
+
+    <h2>Consulta de Profesores</h2>
+    <table id="tabla-profesores">
+        <thead>
+            <tr><th>DNI</th><th>Nombre</th><th>Materia</th><th>Teléfono</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <hr>
+
+    <!-- SECCIÓN ESTUDIANTES (4 parámetros) -->
+    <h2>Registro de Estudiantes</h2>
+    <form onsubmit="agregarEstudiante(event)">
+        <label>Legajo (Clave Única):</label>
+        <input type="text" id="est-legajo" placeholder="Ej: LEG-100" required><br>
+        <label>Nombre:</label>
+        <input type="text" id="est-nombre" placeholder="Ej: Martín Pérez" required><br>
+        <label>Instrumento:</label>
+        <input type="text" id="est-instrumento" placeholder="Ej: Guitarra" required><br>
+        <label>Nivel:</label>
+        <input type="text" id="est-nivel" placeholder="Ej: Principiante" required><br>
+        <button type="submit">Guardar Estudiante</button>
+    </form>
+
+    <h2>Consulta de Estudiantes</h2>
+    <table id="tabla-estudiantes">
+        <thead>
+            <tr><th>Legajo</th><th>Nombre</th><th>Instrumento</th><th>Nivel</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <!-- Scripts de Firebase (Versión clásica / compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <!-- Tu archivo JavaScript -->
+    <script src="java.js"></script>
+</body>
+</html>
